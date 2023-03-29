@@ -1,9 +1,13 @@
 # UPSquared ROS Melodic Install Guide
 
 This Document is a UPSquared ROS Melodic Install Guide from BareMetal.
+
 Scripts are Used for Quick Configure.
+
 **READ THEM BEFORE EXECUTE**
+
 Execute them in Order after your Modification.
+
 Every Script Ends with a Reboot Operation, so REBOOT your board when you see "Finished!"
 
 ## Flash System Image
