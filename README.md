@@ -122,7 +122,7 @@ Every Script Ends with a Reboot Operation, so REBOOT your board when you see "Fi
 
 - Install New Compiled Kernel:
 
-        sudo make modules_install
+        sudo make INSTALL_MOD_STRIP=1 modules_install
         sudo make install
         cd /boot
         sudo mkinitramfs -k -o initrd.img-5.4.230-rt80 5.4.230-rt80
@@ -137,7 +137,7 @@ Every Script Ends with a Reboot Operation, so REBOOT your board when you see "Fi
 
 - Verify if kernel is updated Correctly:
 
-    *Kernel Version Should Changed to 5.4.0-1-generic*
+    *Kernel Version Should Changed to 5.4.230-rt80*
 
         uname -a
 
