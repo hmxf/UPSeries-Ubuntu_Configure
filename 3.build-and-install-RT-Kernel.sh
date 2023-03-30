@@ -15,7 +15,7 @@ sudo cp /boot/config-5.4.0-1-generic .config
 sudo make menuconfig
 echo -e "\e[1;92mBuild Kernel and install..."
 sudo make -j$(nproc)
-sudo make modules_install
+sudo make INSTALL_MOD_STRIP=1 modules_install
 sudo make install
 cd /boot
 sudo mkinitramfs -k -o initrd.img-5.4.230-rt80 5.4.230-rt80
