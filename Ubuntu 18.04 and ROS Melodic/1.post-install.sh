@@ -1,4 +1,3 @@
-
 echo -e "\e[1;92mUpdate System..."
 sudo apt update && sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 echo -e "\e[1;92mInstall Packages..."
