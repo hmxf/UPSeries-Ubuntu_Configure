@@ -1,8 +1,8 @@
 # UPSquared Series RT Kernel Build Guide
 
-This Document is a UPSquared ROS Install Guide from BareMetal.
+This Document is a ROS Install Guide from BareMetal UPSquared Series Development Board.
 
-Scripts are Used for  Ubuntu 18.04.6 LTS and ROS Melodic Quick Configure.
+Scripts should be Used for Documents' References.
 
 **READ THEM BEFORE EXECUTE**
 
