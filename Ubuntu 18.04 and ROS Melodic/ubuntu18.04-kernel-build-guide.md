@@ -70,11 +70,9 @@
         sudo cp /boot/config-5.4.0-1-generic .config
         sudo make menuconfig
 
-    - Select "General setup > Preemption Model" Option
-    - Choose "Fully Preemptible Kernel(Real-Time)" Option
-    - Back to Top Level Menu
-    - Select "Device Drivers" Option
-    - De-select "Staging drivers" Option
+    - Select "General setup > Preemption Model" Option, Choose "Fully Preemptible Kernel(Real-Time)" Option
+    - Select "Processor type and features > Timer frequency" Option, Choose "1000 HZ" Option
+    - Select "Device Drivers" Option, De-select "Staging drivers" Option
     - Exit Configure Menu, All Modifications are Auto-Saved to .config File
 
 - Compile Kernel:
