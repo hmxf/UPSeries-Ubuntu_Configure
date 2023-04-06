@@ -1,3 +1,4 @@
+#!/bin/bash
 echo -e "\e[1;92mInstall and Set Python 3.8 for ROS Noetic..."
 sudo apt install -y python3.8 pip
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1

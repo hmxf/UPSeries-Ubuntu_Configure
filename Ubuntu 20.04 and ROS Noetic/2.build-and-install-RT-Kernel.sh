@@ -1,3 +1,4 @@
+#!/bin/bash
 echo -e "\e[1;92mDownload Kernel and patch..."
 sudo mkdir /usr/src/rt-preempt-linux
 cd /usr/src/rt-preempt-linux

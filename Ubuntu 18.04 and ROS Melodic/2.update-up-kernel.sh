@@ -1,3 +1,4 @@
+#!/bin/bash
 echo -e "\e[1;92mAdd PPA Source..."
 sudo add-apt-repository -y ppa:up-division/5.4-upboard
 echo -e "\e[1;92mRemove Old Kernel..."

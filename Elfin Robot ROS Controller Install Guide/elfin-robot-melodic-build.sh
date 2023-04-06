@@ -1,3 +1,4 @@
+#!/bin/bash
 echo -e "\e[1;92mInstall Dependent Software Packages..."
 sudo apt update && sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 sudo apt install -y ros-melodic-soem ros-melodic-gazebo-ros-control ros-melodic-ros-control ros-melodic-ros-controllers

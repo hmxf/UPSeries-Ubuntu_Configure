@@ -1,6 +1,6 @@
-# UPSquared Series RT Kernel Build Guide
+# UPSquared Series RT Kernel and ROS Install Guide
 
-This Document is a ROS Install Guide from BareMetal UPSquared Series Development Board.
+This Document is a RT Kernel and ROS Install Guide from Bare Metal UPSquared Series Development Board.
 
 Scripts should be Used for Documents' References.
 
@@ -8,7 +8,7 @@ Scripts should be Used for Documents' References.
 
 Execute them in Order after your Modification.
 
-Every Script Ends with a Reboot Operation, so REBOOT your board when you see "Finished!"
+Every Script Ends with a Reboot Operation, so **REBOOT** your board when scripts ended its execution with a "Finished!" message.
 
 ## Flash System Image
 
@@ -25,24 +25,24 @@ Every Script Ends with a Reboot Operation, so REBOOT your board when you see "Fi
 - Install System with steps the same as what you were doing on PC or Server.
 - After install, install Updates and tools:
 
-        sudo apt update && sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
-        sudo apt install -y git nano curl wget openssh-server net-tools tree htop screen tmux
+      sudo apt update && sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+      sudo apt install -y git nano curl wget openssh-server net-tools tree htop screen tmux
 
 - Install Ubuntu-desktop for Graphic Uses:
 
-        sudo apt install -y ubuntu-desktop
+      sudo apt install -y ubuntu-desktop
 
 - Reboot the UPSquared:
 
-        sudo init 6
+      sudo init 6
 
 ## Select Correct Kernel Build Guide and Matched ROS Install Guide for Next Steps.
 
 [Ubuntu 18.04.6 LTS RT Kernel Build and Install Guide](./Ubuntu%2018.04%20and%20ROS%20Melodic/ubuntu18.04-kernel-build-guide.md)
 
-[Ubuntu 20.04.5 LTS RT Kernel Build and Install Guide](./Ubuntu%2020.04%20and%20ROS%20Noetic/ubuntu20.04-kernel-build-guide.md)
-
 [ROS Melodic Install Guide for Ubuntu 18.04.6 LTS](./Ubuntu%2018.04%20and%20ROS%20Melodic/ros-melodic-install-guide.md)
+
+[Ubuntu 20.04.5 LTS RT Kernel Build and Install Guide](./Ubuntu%2020.04%20and%20ROS%20Noetic/ubuntu20.04-kernel-build-guide.md)
 
 [ROS Noetic Install Guide for Ubuntu 20.04.5 LTS](./Ubuntu%2020.04%20and%20ROS%20Noetic/ros-noetic-install-guide.md)
 

@@ -1,4 +1,4 @@
-## Build New Linux Kernel Designed for UPSquared with Ubuntu 20.04.5 LTS
+## Build New Linux Kernel Designed for UPSquared with Ubuntu 20.04.6 LTS
 
 - Create Workspace:
 
