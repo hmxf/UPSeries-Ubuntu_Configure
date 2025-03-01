@@ -19,7 +19,7 @@
 
 - Install Other Dependencies:
 
-      sudo apt -y install build-essential libgtk-3-dev
+      sudo apt -y install build-essential libgtk-3-dev python3-catkin-tools
       pip3 install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04 wxPython
 
 - Create catkin Workspace:
@@ -27,14 +27,15 @@
       source /opt/ros/noetic/setup.bash
       mkdir -p ~/catkin_ws/src
       cd ~/catkin_ws/
-      catkin_make
+      catkin build
 
 - Build and Configure Elfin Robot Control Software:
 
       cd ~/catkin_ws/src
       git clone -b noetic https://github.com/hans-robot/elfin_robot.git
       cd ..
-      catkin_make
+      catkin build elfin_ethercat_driver
+      catkin build
       source devel/setup.bash
 
 ## Operate Elfin Robot through Gazebo Simulation and Real Hardware
