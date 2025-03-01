@@ -4,6 +4,16 @@ This Document is a RT Kernel and ROS Install Guide from Bare Metal UPSquared Ser
 
 Scripts should be Used for Documents' References, and, **READ THEM BEFORE EXECUTE**, Execute them in Order after your Modification.
 
+**UP Xtreme i11 and UP Squared 6000**
+
+These platforms can only install Ubuntu 20.04 or 22.04. Ubuntu 18.04 is not supported on these platforms. After my test on UP Squared 6000, the more obvious abnormalities include that the 2.5GbE network card cannot be recognized, the display resolution cannot be automatically adapted and difficult to adjust, etc. The full order of scripts need to be run are shown as below and have been tested under UP Squared 6000 + Ubuntu 20.04 + ROS Noedic.
+
+<ul>
+<li>Ubuntu 20.04 and ROS Noetic/1.post-install.sh</li>
+<li>Ubuntu 20.04 and ROS Noetic/2.build-and-install-RT-Kernel.sh</li>
+<li>Ubuntu 20.04 and ROS Noetic/3.ros-noetic-install.sh</li>
+</ul>
+
 **UP, UP 4000, UP Squared, UP Squared V2, UP Core, UP Core Plus, UP Xtreme, UP Squared Pro**
 
 These platforms can install Ubuntu 18.04 or 20.04, and use AAEON's kernel source to add driver support, or build our own kernel. If you are going to install Ubuntu 18.04 on these platforms, the full order of scripts need to be run are shown as below and have been tested under UP Squared + Ubuntu 18.04 + ROS Melodic.
@@ -21,16 +31,6 @@ Since 18.04 and 20.04 shares the same 5.4 kernel on these development boards, so
 <li>Ubuntu 20.04 and ROS Noetic/1.post-install.sh</li>
 <li>Ubuntu 18.04 and ROS Melodic/2.update-up-kernel.sh</li>
 <li>Ubuntu 18.04 and ROS Melodic/3.build-and-install-RT-Kernel.sh</li>
-<li>Ubuntu 20.04 and ROS Noetic/3.ros-noetic-install.sh</li>
-</ul>
-
-**UP Xtreme i11 and UP Squared 6000**
-
-These platforms can only install Ubuntu 20.04 or 22.04. Ubuntu 18.04 is not supported on these platforms. After my test on UP Squared 6000, the more obvious abnormalities include that the 2.5GbE network card cannot be recognized, the display resolution cannot be automatically adapted and difficult to adjust, etc. The full order of scripts need to be run are shown as below and have been tested under UP Squared 6000 + Ubuntu 20.04 + ROS Noedic.
-
-<ul>
-<li>Ubuntu 20.04 and ROS Noetic/1.post-install.sh</li>
-<li>Ubuntu 20.04 and ROS Noetic/2.build-and-install-RT-Kernel.sh</li>
 <li>Ubuntu 20.04 and ROS Noetic/3.ros-noetic-install.sh</li>
 </ul>
 

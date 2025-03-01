@@ -11,38 +11,38 @@
 
     ***Select Matched version of Kernel and Patch is very important***
 
-    For example, we download Version 5.15.96 here.
+    For example, we download Version 5.15.177 here.
 
-        https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.15.96.tar.gz
-        https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.15/patch-5.15.96-rt61.patch.gz
+        https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.15.177.tar.gz
+        https://mirrors.edge.kernel.org/pub/linux/kernel/projects/rt/5.15/patch-5.15.177-rt83.patch.gz
 
 - Copy Kernel and Patch to Workspace and Unzip them:
 
-        sudo cp ~/linux-5.15.96.tar.gz /usr/src/rt-preempt-linux
-        sudo cp ~/patch-5.15.96-rt61.patch.gz /usr/src/rt-preempt-linux
-        sudo tar -xzvf linux-5.15.96.tar.gz
-        sudo gunzip patch-5.15.96-rt61.patch.gz
+        sudo cp ~/linux-5.15.177.tar.gz /usr/src/rt-preempt-linux
+        sudo cp ~/patch-5.15.177-rt83.patch.gz /usr/src/rt-preempt-linux
+        cd /usr/src/rt-preempt-linux
+        sudo tar -xzvf linux-5.15.177.tar.gz
+        sudo gunzip patch-5.15.177-rt83.patch.gz
 
 - Install Necessary Tools, Libraries and Apply Patch:
 
         cd /usr/bin
+        sudo apt install libncurses5-dev flex bison cmake libssl-dev libelf-dev zstd binutils dwarves fakeroot
         sudo ln -s objdump nobjdump
         sudo ln -s ld nld
-        sudo apt install libncurses5-dev flex bison cmake libssl-dev libelf-dev zstd binutils dwarves fakeroot
-        sudo cp patch-5.15.96-rt61.patch linux-5.15.96/
-        cd /usr/src/rt-preempt-linux/linux-5.15.96
-        sudo patch -p1 < patch-5.15.96-rt61.patch
+        cd /usr/src/rt-preempt-linux
+        sudo cp patch-5.15.177-rt83.patch linux-5.15.177/
+        cd /usr/src/rt-preempt-linux/linux-5.15.177
+        sudo patch -p1 < patch-5.15.177-rt83.patch
 
 - Configure Kernel Compile Parameters:
 
         sudo make mrproper
-        sudo cp /boot/config-5.15.0-1026-intel-iotg .config
+        sudo cp /boot/config-5.15.0-1073-intel-iotg .config
         sudo make menuconfig
 
     - Select "General setup > Preemption Model" Option, Choose "Fully Preemptible Kernel(Real-Time)" Option
     - Select "Processor type and features > Timer frequency" Option, Choose "1000 HZ" Option
-    - Select "Device Drivers" Option, De-select "Staging drivers" Option
-    - Select "Binary Emulations" Option, De-select "x32 ABI for 64-bit mode" Option
     - Select "Kernel hacking > Compile-time checks and compiler options" Option, De-select "Compile the kernel with debug info" Option
     - Select "Cryptographic API > Certificates for signature checking" Option, Set "Additional X.509 keys for default system keyring" to blank
     - Select "Cryptographic API > Certificates for signature checking" Option, Set "X.509 certificates to be preloaded into the system blacklist keyring" to blank
@@ -60,7 +60,7 @@
         sudo make bzImage
         sudo make install
         cd /boot
-        sudo mkinitramfs -k -o initrd.img-5.15.96-rt61 5.15.96-rt61
+        sudo mkinitramfs -k -o initrd.img-5.15.177-rt83 5.15.177-rt83
 
 - Update GRUB Boot Options:
 
@@ -72,6 +72,6 @@
 
 - Verify if kernel is updated Correctly:
 
-    *Kernel Version Should Changed to 5.15.96-rt61*
+    *Kernel Version Should Changed to 5.15.177-rt83*
 
         uname -a
