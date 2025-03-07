@@ -39,7 +39,7 @@ Every Script Ends with a Reboot Operation, so **REBOOT** your board when scripts
 ## Flash System Image
 
 - Choose [Ubuntu 18.04.6 LTS Image](https://releases.ubuntu.com/18.04.6/ubuntu-18.04.6-live-server-amd64.iso) for combination use with ROS Melodic.
-- Choose [Ubuntu 20.04.5 LTS Image](https://cdimage.ubuntu.com/ubuntu-server/focal/daily-live/manual/focal-live-server-amd64+intel-iot.iso) for combination use with ROS Noetic.
+- Choose [Ubuntu 20.04.5 LTS Image](https://cdimage.ubuntu.com/releases/focal/release/inteliotg/ubuntu-20.04-live-server-amd64+intel-iot.iso) for combination use with ROS Noetic.
 - Download and Flash System Image to USB Thumbdrive.
 
 ## System Flashing and Pre-configure
